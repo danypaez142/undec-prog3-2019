@@ -57,7 +57,7 @@ public class Cliente {
     }
     
     public String datosDelCiente(){
-        return "Documento: " + this.documento + ", \nApellido y Nombre: " + this.nombre;
+        return "Documento: " + this.documento + ", \nApellido y Nombre: " + this.nombre + "\n";
     }
     
 }

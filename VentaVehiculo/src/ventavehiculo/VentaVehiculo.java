@@ -19,7 +19,8 @@ public class VentaVehiculo {
             imprimirLinea("1. Menu de Carga de Datos");
             imprimirLinea("2. Menu de Ventas de Vehiculos");
             imprimir("Elija una opcion: ");
-            switch(opcion = Integer.parseInt(ingresoDeDatos())){
+            opcion = Integer.parseInt(ingresoDeDatos());
+            switch(opcion){
                 case 1:
                     do {
                         imprimirLinea(" ");
@@ -30,7 +31,8 @@ public class VentaVehiculo {
                         imprimirLinea("4. Nueva Camioneta");
                         imprimirLinea("0. Salir");
                         imprimir("Elija una opcion: ");
-                        switch(opcion = Integer.parseInt(ingresoDeDatos())){
+                        opcion = Integer.parseInt(ingresoDeDatos());
+                        switch(opcion){
                             case 0:
                                 terminar = "n";
                                 break;
@@ -60,19 +62,26 @@ public class VentaVehiculo {
                                 break;
                         }
                     } while(terminar.equals("y"));
-                case 2:{
+                /*case 2:{
                     do{
                         imprimir("Ingrese el DNI del Cliente: ");
                         buscador = ingresoDeDatos();
                         c = busquedaClientePorDocumento(buscador, clientes);
                         imprimirLinea(c.datosDelCiente());
-                        
-                        
+                        imprimirLinea("Que vehiculo desea comprar?");
+                        imprimirLinea("1. Automovil");
+                        imprimirLinea("2. Motocicleta");
+                        imprimirLinea("3. Camioneta");
+                        imprimir("Elija una opcion: ");
+                        opcion = Integer.parseInt(ingresoDeDatos());
+                        switch(opcion){
+                            
+                        }
                     }while(terminar.equals("y"));
                     imprimir("Desea Continuar en el Menu de Ventas? y/n: ");
                     terminar = ingresoDeDatos();
                     break;
-                }
+                }*/
                     
                 default:
                     imprimir("Desea Continuar en el Menu? y/n: ");
@@ -84,6 +93,13 @@ public class VentaVehiculo {
         
         
     }
+    public static void imprimir(String cadena){
+        System.out.print(cadena);
+    }
+    
+    public static void imprimirLinea(String cadena){
+        System.out.println(cadena);
+    }   
     
     public static String ingresoDeDatos(){
         Scanner lector = new Scanner(System.in);
@@ -110,6 +126,10 @@ public class VentaVehiculo {
         Auto prueba = new Auto();
         imprimirLinea(" ");
         imprimirLinea("Se dara de alta un nuevo Automovil");
+        imprimir("Ingrese la marca del Vehiculo: ");
+        prueba.setMarcaVehiculo(ingresoDeDatos());
+        imprimir("Ingrese el modelo del Vehiculo (Nombre Modelo, Año): ");
+        prueba.setModeloVehiculo(ingresoDeDatos());
         imprimir("Ingrese el número de Motor: ");
         prueba.setNumMotor(Integer.parseInt(ingresoDeDatos()));
         imprimir("Ingrese el número de Chasis: ");
@@ -134,6 +154,10 @@ public class VentaVehiculo {
         imprimirLinea(" ");
         Moto prueba = new Moto();
         imprimirLinea("Se dara de alta una nueva Motocicleta");
+        imprimir("Ingrese la marca del Vehiculo: ");
+        prueba.setMarcaVehiculo(ingresoDeDatos());
+        imprimir("Ingrese el modelo del Vehiculo (Nombre Modelo, Año): ");
+        prueba.setModeloVehiculo(ingresoDeDatos());
         imprimir("Ingrese el número de Motor: ");
         prueba.setNumMotor(Integer.parseInt(ingresoDeDatos()));
         imprimir("Ingrese el número de Chasis: ");
@@ -158,6 +182,10 @@ public class VentaVehiculo {
         imprimirLinea(" ");
         Camioneta prueba = new Camioneta();
         imprimirLinea("Se dara de alta una nueva Camioneta");
+        imprimir("Ingrese la marca del Vehiculo: ");
+        prueba.setMarcaVehiculo(ingresoDeDatos());
+        imprimir("Ingrese el modelo del Vehiculo (Nombre Modelo, Año): ");
+        prueba.setModeloVehiculo(ingresoDeDatos());
         imprimir("Ingrese el número de Motor: ");
         prueba.setNumMotor(Integer.parseInt(ingresoDeDatos()));
         imprimir("Ingrese el número de Chasis: ");
@@ -187,11 +215,5 @@ public class VentaVehiculo {
         return retornar;
     }
     
-    public static void imprimir(String cadena){
-        System.out.print(cadena);
-    }
-    
-    public static void imprimirLinea(String cadena){
-        System.out.println(cadena);
-    }
+
 }

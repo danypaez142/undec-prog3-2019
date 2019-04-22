@@ -10,19 +10,25 @@ public class Vehiculo {
     private int numChasis;
     private String marcaMotor;
     private String marcaChasis;
+    private String marcaVehiculo;
+    private String modeloVehiculo;
     private double precio;
     private double porcentajeDescuento;
     
     public Vehiculo(){
     }
 
-    public Vehiculo(int numMotor, int numChasis, String marcaMotor, String marcaChasis, double precio, double porcentajeDescuento) {
+    public Vehiculo(int numMotor, int numChasis, String marcaMotor, String marcaChasis, 
+            double precio, double porcentajeDescuento, String marcaVehiculo, String
+                    modeloVehiculo) {
         this.numMotor = numMotor;
         this.numChasis = numChasis;
         this.marcaMotor = marcaMotor;
         this.marcaChasis = marcaChasis;
         this.precio = precio;
         this.porcentajeDescuento = porcentajeDescuento;
+        this.marcaVehiculo = marcaVehiculo;
+        this.modeloVehiculo = modeloVehiculo;
     }
     
     public String getMarcaChasis() {
@@ -65,6 +71,22 @@ public class Vehiculo {
         this.porcentajeDescuento = porcentajeDescuento;
     }
 
+    public String getMarcaVehiculo() {
+        return marcaVehiculo;
+    }
+
+    public void setMarcaVehiculo(String marcaVehiculo) {
+        this.marcaVehiculo = marcaVehiculo;
+    }
+
+    public String getModeloVehiculo() {
+        return modeloVehiculo;
+    }
+
+    public void setModeloVehiculo(String modeloVehiculo) {
+        this.modeloVehiculo = modeloVehiculo;
+    }
+    
     public double getPrecio() {
         return precio;
     }
@@ -72,8 +94,4 @@ public class Vehiculo {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
-    
-    
-    
-    
 }

@@ -15,8 +15,11 @@ public class Moto extends Vehiculo{
     public Moto(){
     }
 
-    public Moto(int numMotor, int numChasis, String marcaMotor, String marcaChasis, double precio, double porcentajeDescuento, String tiempo, String categoria) {
-        super(numMotor, numChasis, marcaMotor, marcaChasis, precio, porcentajeDescuento);
+    public Moto(int numMotor, int numChasis, String marcaMotor, String marcaChasis, 
+            double precio, double porcentajeDescuento, String tiempo, String categoria, 
+            String marcaVehiculo, String modeloVehiculo) {
+        super(numMotor, numChasis, marcaMotor, marcaChasis, precio, porcentajeDescuento, 
+                marcaVehiculo, modeloVehiculo);
         this.tiempo = tiempo;
         this.categoria = categoria;
     }

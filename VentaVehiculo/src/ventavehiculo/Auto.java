@@ -7,8 +7,11 @@ public class Auto extends Vehiculo{
     public Auto(){
     }
 
-    public Auto(int numMotor, int numChasis, String marcaMotor, String marcaChasis, double precio, double porcentajeDescuento, String puertas, String combustible) {
-        super(numMotor, numChasis, marcaMotor, marcaChasis, precio, porcentajeDescuento);
+    public Auto(int numMotor, int numChasis, String marcaMotor, String marcaChasis,
+    double precio, double porcentajeDescuento, String puertas, String combustible,
+    String marcaVehiculo, String modeloVehiculo) {
+        super(numMotor, numChasis, marcaMotor, marcaChasis, precio, porcentajeDescuento, marcaVehiculo, 
+                modeloVehiculo);
         this.puertas = puertas;
         this.combustible = combustible;
     }
