@@ -9,7 +9,7 @@ package ventavehiculo;
  * @author UNdeC
  */
 public class Cliente {
-    private int documento;
+    private String documento;
     private String nombre;
     private int edad;
     private String domicilio;
@@ -17,18 +17,18 @@ public class Cliente {
     public Cliente(){
     }
     
-    public Cliente(int documento, String nombre, int edad, String domicilio) {
+    public Cliente(String documento, String nombre, int edad, String domicilio) {
         this.documento = documento;
         this.nombre = nombre;
         this.edad = edad;
         this.domicilio = domicilio;
     }
 
-    public int getDocumento() {
+    public String getDocumento() {
         return documento;
     }
 
-    public void setDocumento(int documento) {
+    public void setDocumento(String documento) {
         this.documento = documento;
     }
 
@@ -56,6 +56,8 @@ public class Cliente {
         this.nombre = nombre;
     }
     
-    
+    public String datosDelCiente(){
+        return "Documento: " + this.documento + ", \nApellido y Nombre: " + this.nombre;
+    }
     
 }

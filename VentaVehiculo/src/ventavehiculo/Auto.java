@@ -1,13 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package ventavehiculo;
 
-/**
- *
- * @author UNdeC
- */
 public class Auto extends Vehiculo{
     private String puertas;
     private String combustible;
