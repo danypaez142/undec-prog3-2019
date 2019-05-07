@@ -9,8 +9,8 @@ public class Aerolinea {
 		this.nombre = nombre;
 	}
 
-	public Integer getIdAerolinea() {
-		return this.idAerolinea;
+	public int getIdAerolinea() {
+		return this.idAerolinea.intValue();
 	}
 
 	public String getNombre() {
