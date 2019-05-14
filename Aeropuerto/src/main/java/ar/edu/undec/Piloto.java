@@ -1,8 +1,5 @@
 package ar.edu.undec;
 import java.time.LocalDate;
-
-import org.omg.PortableInterceptor.ServerRequestInfo;
-
 public class Piloto {
 	private Integer idPiloto;
 	private String apellido;
@@ -37,5 +34,4 @@ public class Piloto {
 	public LocalDate getFechaNacimiento() {
 		return this.fechaNacimiento;
 	}
-
 }

@@ -19,7 +19,7 @@ public class CiudadUnitTest {
 		Ciudad nuevo = new Ciudad(0, "Chilecito", "5360");
 		assertNotEquals(3, nuevo.getIdCiudad());
 		assertEquals("Chilecito", nuevo.getNombre());
-		assertEquals("5360", nuevo.getNombre());
+		assertEquals("5360", nuevo.getCodigoPostal());
 	}
 	
 	@Test

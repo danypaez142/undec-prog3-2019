@@ -11,7 +11,7 @@ import org.junit.Test;
 public class VueloUnitTest {
 
 	@Test
-	public void instanciarVuelo_TodosLosAtributos_Correctos() {
+	public void instanciarVuelo_TodosLosAtributos_Correctos() throws ExcepcionCampoIncorrecto {
 		Ciudad ciudadSalida = new Ciudad(1, "Chilecito", "5360");
 		Ciudad ciudadArribo = new Ciudad(2, "Gran Buenos Aires", "5300");
 		Aeropuerto salida = new Aeropuerto(1, "San Creyente del Tuyu", ciudadSalida, "0b369s");
@@ -30,8 +30,8 @@ public class VueloUnitTest {
 			Asiento este = new Asiento(i, "A"+i);
 			asientos.add(este);
 		}
-		Pasajero pasajero = new Pasajero(0, "2036987412", "Leiva", "Jose Alberto", "+11258963471");
-		Pasajero pasajero2 = new Pasajero(1, "2037987412", "Leiva", "Juan Roberto", "+11255963471");
+		Pasajero pasajero = new Pasajero(0, "20-36987412-8", "Leiva", "Jose Alberto", "+11258963471");
+		Pasajero pasajero2 = new Pasajero(1, "20-37987412-4", "Leiva", "Juan Roberto", "+11255963471");
 		pasajeros.add(pasajero);
 		pasajeros.add(pasajero2);
 		Avion avion = new Avion(0, "Drakar 252", "G0T3-4", asientos);

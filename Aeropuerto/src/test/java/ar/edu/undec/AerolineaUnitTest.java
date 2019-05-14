@@ -24,7 +24,7 @@ public class AerolineaUnitTest {
 	public void instanciarAerolinea_TodosLosAtributos_NombreIncorrecto() {
 		Aerolinea nueva = new Aerolinea(0, "Avianchi");
 		assertEquals(0, nueva.getIdAerolinea());
-		assertNotEquals("Avianchi", nueva.getNombre());
+		assertNotEquals("Ledezma", nueva.getNombre());
 	}
 	
 	@Test

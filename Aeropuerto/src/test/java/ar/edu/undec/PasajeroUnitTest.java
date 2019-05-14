@@ -7,7 +7,7 @@ import org.junit.Test;
 public class PasajeroUnitTest {
 
 	@Test
-	public void instanciarPasajero_TodosLosAtributos_Correctos() {
+	public void instanciarPasajero_TodosLosAtributos_Correctos() throws ExcepcionCampoIncorrecto {
 		Pasajero nuevo = new Pasajero(0, "20374929330", "Paez", "Daniel Marcelo", "+5493825416602");
 		assertEquals(0, nuevo.getIdPasajero());
 		assertEquals("20374929330", nuevo.getCuil());
@@ -17,7 +17,7 @@ public class PasajeroUnitTest {
 	}
 	
 	@Test
-	public void instanciarPasajero_TodosLosAtributos_Inorrectos() {
+	public void instanciarPasajero_TodosLosAtributos_Inorrectos() throws ExcepcionCampoIncorrecto {
 		Pasajero nuevo = new Pasajero(0, "20374929330", "Paez", "Daniel Marcelo", "+5493825416602");
 		assertNotEquals(6, nuevo.getIdPasajero());
 		assertNotEquals("21374929330", nuevo.getCuil());

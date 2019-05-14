@@ -16,5 +16,4 @@ public class Aerolinea {
 	public String getNombre() {
 		return this.nombre;
 	}
-
 }

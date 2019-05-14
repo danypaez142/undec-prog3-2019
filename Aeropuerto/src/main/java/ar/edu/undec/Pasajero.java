@@ -7,12 +7,22 @@ public class Pasajero {
 	private String nombres;
 	private String telefono;
 
-	public Pasajero(Integer id, String cuil, String apellido, String nombres, String telefono) {
-		this.idPasajero = id;
-		this.cuil = cuil;
-		this.apellido = apellido;
-		this.nombres = nombres;
-		this.telefono = telefono;		
+	public Pasajero(Integer id, String cuil, String apellido, String nombres, String telefono) throws ExcepcionCampoIncorrecto{
+		if(cuil.isEmpty()) {
+			throw new ExcepcionCampoIncorrecto("El cuil no puede estar vacio");
+		}else if(cuil.length() < 11 || cuil.length() > 14){
+			throw new ExcepcionCampoIncorrecto("El cuil esta incorrecto");
+		}else {
+			this.idPasajero = id;
+			this.cuil = cuil;
+			this.apellido = apellido;
+			this.nombres = nombres;
+			this.telefono = telefono;
+		}
+	}
+
+	public Pasajero() {
+		
 	}
 
 	public int getIdPasajero() {
@@ -33,6 +43,18 @@ public class Pasajero {
 
 	public String getTelefono() {
 		return this.telefono;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public void setNombres(String nombres) {
+		this.nombres = nombres;
+	}
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
 	}
 	
 	
