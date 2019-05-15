@@ -10,7 +10,7 @@ import org.junit.Test;
 public class PilotoUnitTest {
 
 	@Test
-	public void instanciarPiloto_todosLosCaAtributos_Correctos() {
+	public void instanciarPiloto_todosLosCaAtributos_Correctos() throws ExcepcionCampoIncorrecto {
 		LocalDate fechaNacimiento = LocalDate.of(1989, 7, 25);
 		Piloto nuevo = new Piloto(0, "Perez", "Julio Alejandro", "37492933", fechaNacimiento);
 		assertEquals(0, nuevo.getIdPiloto());
@@ -20,7 +20,7 @@ public class PilotoUnitTest {
 		assertEquals(fechaNacimiento, nuevo.getFechaNacimiento());
 	}
 	@Test
-	public void instanciarPiloto_todosLosCaAtributos_Incorrectos() {
+	public void instanciarPiloto_todosLosCaAtributos_Incorrectos() throws ExcepcionCampoIncorrecto {
 		LocalDate fechaNacimiento = LocalDate.of(1989, 7, 25);
 		LocalDate fechaPrueba = LocalDate.of(1979, 7, 30);
 		Piloto nuevo = new Piloto(0, "Perez", "Julio Alejandro", "37492933", fechaNacimiento);
@@ -31,7 +31,7 @@ public class PilotoUnitTest {
 		assertNotEquals(fechaPrueba, nuevo.getFechaNacimiento());	
 	}
 	@Test
-	public void instanciarPiloto_todosLosAtributos_MayorDeEdad() {
+	public void instanciarPiloto_todosLosAtributos_MayorDeEdad() throws ExcepcionCampoIncorrecto {
 		LocalDate fechaAhora = LocalDate.now();
 		LocalDate fechaNacimiento = LocalDate.of(2001, 5, 8);
 		Piloto nuevo = new Piloto(0, "Perez", "Julio Alejandro", "37492933", fechaNacimiento);

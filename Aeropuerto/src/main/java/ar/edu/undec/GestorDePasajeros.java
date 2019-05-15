@@ -38,7 +38,7 @@ public class GestorDePasajeros {
 		return devolver;
 	}
 	
-	private boolean consultarExistenciaPasajero(String cuil) {
+	public boolean consultarExistenciaPasajero(String cuil) {
 		boolean devolver = false;
 		for (Pasajero pasajero : pasajeros) {
 			if(pasajero.getCuil().equals(cuil))
