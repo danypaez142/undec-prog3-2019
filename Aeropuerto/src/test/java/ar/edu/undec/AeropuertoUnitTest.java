@@ -5,11 +5,10 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class AeropuertoUnitTest {
-	Ciudad ciudad = new Ciudad(3, "Chilecito", "5360");
-	
-	@Test
-	public void instanciarAeropuerto_TodosLosAtributos_Correctos() {
 		
+	@Test
+	public void instanciarAeropuerto_TodosLosAtributos_Correctos() throws ExcepcionCampoIncorrecto {
+		Ciudad ciudad = new Ciudad(3, "Chilecito", "5360");
 		Aeropuerto nuevo = new Aeropuerto(0, "Aeropuerto Chilecito", ciudad, "0b369s");
 		assertEquals(0, nuevo.getIdAeropuerto());
 		assertEquals("Aeropuerto Chilecito", nuevo.getNombre());
@@ -17,7 +16,8 @@ public class AeropuertoUnitTest {
 		assertEquals("0b369s", nuevo.getCodigo());
 	}
 	@Test
-	public void instanciarAeropuerto_TodosLosAtributos_Incorrectos() {
+	public void instanciarAeropuerto_TodosLosAtributos_Incorrectos() throws ExcepcionCampoIncorrecto {
+		Ciudad ciudad = new Ciudad(3, "Chilecito", "5360");
 		Ciudad ciudad2 = new Ciudad(3, "Nonogasta", "5360");
 		Aeropuerto nuevo = new Aeropuerto(0, "Aeropuerto Chilecito", ciudad, "0b369s");
 		assertNotEquals(3, nuevo.getIdAeropuerto());

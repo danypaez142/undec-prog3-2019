@@ -7,7 +7,7 @@ import org.junit.Test;
 public class CiudadUnitTest {
 	
 	@Test
-	public void instanciarCiudad_TodosLosAtributos_Correctos() {
+	public void instanciarCiudad_TodosLosAtributos_Correctos() throws ExcepcionCampoIncorrecto {
 		Ciudad nuevo = new Ciudad(0, "Chilecito", "5360");
 		assertEquals(0, nuevo.getIdCiudad());
 		assertEquals("Chilecito", nuevo.getNombre());
@@ -15,7 +15,7 @@ public class CiudadUnitTest {
 	}
 	
 	@Test
-	public void instanciarCiudad_TodosLosAtributos_IdIncorrecto() {
+	public void instanciarCiudad_TodosLosAtributos_IdIncorrecto() throws ExcepcionCampoIncorrecto {
 		Ciudad nuevo = new Ciudad(0, "Chilecito", "5360");
 		assertNotEquals(3, nuevo.getIdCiudad());
 		assertEquals("Chilecito", nuevo.getNombre());
@@ -23,7 +23,7 @@ public class CiudadUnitTest {
 	}
 	
 	@Test
-	public void instanciarCiudad_TodosLosAtributos_NombreIncorrecto() {
+	public void instanciarCiudad_TodosLosAtributos_NombreIncorrecto() throws ExcepcionCampoIncorrecto {
 		Ciudad nuevo = new Ciudad(0, "Chilecito", "5360");
 		assertEquals(0, nuevo.getIdCiudad());
 		assertNotEquals("Famatina", nuevo.getNombre());
@@ -31,7 +31,7 @@ public class CiudadUnitTest {
 	}
 	
 	@Test
-	public void instanciarCiudad_TodosLosAtributos_CodigoPostalIncorrecto() {
+	public void instanciarCiudad_TodosLosAtributos_CodigoPostalIncorrecto() throws ExcepcionCampoIncorrecto {
 		Ciudad nuevo = new Ciudad(0, "Chilecito", "5360");
 		assertEquals(0, nuevo.getIdCiudad());
 		assertEquals("Chilecito", nuevo.getNombre());
