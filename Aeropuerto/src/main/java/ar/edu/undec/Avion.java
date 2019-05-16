@@ -8,11 +8,19 @@ public class Avion {
 	private String matricula;
 	private List<Asiento> asientos;
 
-	public Avion(Integer id, String modelo, String matricula, List<Asiento> asientos) {
-		this.idAvion = id;
-		this.modelo = modelo;
-		this.matricula = matricula;
-		this.asientos = asientos;
+	public Avion(Integer id, String modelo, String matricula, List<Asiento> asientos) throws ExcepcionCampoIncorrecto {
+		if(matricula.isEmpty())
+			throw new ExcepcionCampoIncorrecto("La Matricula no puede estar vacia");
+		else {
+			this.idAvion = id;
+			this.modelo = modelo;
+			this.matricula = matricula;
+			this.asientos = asientos;
+		}
+	}
+
+	public Avion() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public int getId() {

@@ -10,7 +10,7 @@ import org.junit.Test;
 public class AvionUnitTest {
 
 	@Test
-	public void instanciarAvion_TodosLosAtributos_Correctos() {
+	public void instanciarAvion_TodosLosAtributos_Correctos() throws ExcepcionCampoIncorrecto {
 		List<Asiento> asientos = new ArrayList<>(); 
 		for (int i = 0; i < 3; i++) {
 			Asiento este = new Asiento(i, "A"+i);
@@ -24,7 +24,7 @@ public class AvionUnitTest {
 		
 	}
 	@Test
-	public void instanciarAvion_TodosLosAtributos_Incorrectos() {
+	public void instanciarAvion_TodosLosAtributos_Incorrectos() throws ExcepcionCampoIncorrecto {
 		List<Asiento> asientos = new ArrayList<>();
 		List<Asiento> noAsientos = new ArrayList<>(); 
 		for (int i = 0; i < 3; i++) {
