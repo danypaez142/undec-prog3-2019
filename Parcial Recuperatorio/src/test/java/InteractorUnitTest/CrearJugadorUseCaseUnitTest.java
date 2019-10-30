@@ -10,6 +10,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 
 import Exceptions.JugadorExisteException;
+import Exceptions.JugadorIncompletoException;
+import Interactor.CrearJugadorUseCase;
 
 import java.time.LocalDate;
 

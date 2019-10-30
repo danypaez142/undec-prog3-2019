@@ -1,6 +1,7 @@
 package Model;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 import Exceptions.JugadorIncompletoException;
 
@@ -27,4 +28,18 @@ public class Jugador {
 		}			
 		else return new Jugador(id, nombre, fechaNacimiento, estatura, documento);
 	}
+
+	public String getDocumento() {
+		return this.documento;
+	}
+	
+	public Integer getEdad() {
+		return Period.between(this.fechaNacimiento, LocalDate.now()).getYears();
+	}
+
+	public double getAltura() {
+		return this.estatura;
+	}
+	
+	
 }

@@ -1,7 +1,9 @@
 package Interactor;
 
+import Exceptions.JugadorAsignadoException;
 import Model.Equipo;
 import Model.Jugador;
+import Repositorio.IRepositorioAsignarJugador;
 
 public class AsignarJugadorUseCase {
     private IRepositorioAsignarJugador iRepositorioAsignarJugador;
@@ -16,7 +18,7 @@ public class AsignarJugadorUseCase {
         {
             return true;
         }
-        throw new JugadorAsignadoException();
+         throw new JugadorAsignadoException();
 
     }
 }

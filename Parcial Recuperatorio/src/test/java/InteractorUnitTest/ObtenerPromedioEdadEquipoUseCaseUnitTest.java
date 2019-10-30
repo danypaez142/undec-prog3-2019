@@ -4,10 +4,15 @@ import Interactor.ObtenerPromedioEdadEquipoUseCase;
 import Mockito.MockitoExtension;
 import Model.Equipo;
 import Model.Jugador;
+import Repositorio.IRepositorioObtenerEquipo;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
+
+import Exceptions.EquipoIncompletoException;
+import Exceptions.JugadorIncompletoException;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
